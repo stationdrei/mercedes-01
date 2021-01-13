@@ -18,8 +18,8 @@
     <hotspots width="180" height="20" wordwrap="1">
       <label backgroundcolor="0xffffff" backgroundalpha="1" textcolor="0x000000" width="180" enabled="1" height="20" bordercolor="0x000000" textalpha="1" background="1" border="1" wordwrap="1" borderradius="1" borderalpha="1"/>
       <polystyle mode="0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" bordercolor="0x0000ff" borderalpha="1" handcursor="1"/>
-      <polyhotspot target="0/0/70.0" backgroundcolor="0x0000ff" backgroundalpha="0.25098" description="" id="Poly02" url="{node4}" title="" bordercolor="0x0000ff" borderalpha="1">
-        <polystring>-320.17/20.57|-11.93/25.2|-11.57/-20.21|-319.99/-16.24</polystring>
+      <polyhotspot target="" backgroundcolor="0x0000ff" backgroundalpha="0.25098" description="" id="Poly02" url="{node4}" title="" bordercolor="0x0000ff" borderalpha="1">
+        <polystring>-320.17/20.57|-28.36/25.48|-28.63/-32.29|-320.68/-25.28</polystring>
       </polyhotspot>
     </hotspots>
     <media>
