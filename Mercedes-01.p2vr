@@ -55,6 +55,7 @@
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>rectilinear</flyinprojection>
+        <defaultviewtimestamp>2021-02-09T17:47:43</defaultviewtimestamp>
       </viewingparameter>
       <userdata>
         <capturedatetime>2020-10-29T15:24:04</capturedatetime>
