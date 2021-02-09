@@ -15,10 +15,10 @@
             <applyafterlevelling>0</applyafterlevelling>
             <locked>1</locked>
             <quality>90</quality>
-            <filename>../mercedes-02/patches/intro_patch.psd</filename>
+            <filename>../mercedes-02/patches/intro_patch1.psd</filename>
             <type>image</type>
             <blurintensity>10</blurintensity>
-            <lastmodified>2021-02-09T09:20:59</lastmodified>
+            <lastmodified>2021-02-09T16:58:40</lastmodified>
           </imagepatch>
         </patch>
         <type>auto</type>
@@ -152,6 +152,114 @@
       <animation>
         <sequence/>
       </animation>
+      <clip>
+        <title>Clip01</title>
+        <animationtype>keyframe</animationtype>
+        <flyin>0</flyin>
+        <keyframe>
+          <valuein>
+            <time>0</time>
+            <value>5.57309</value>
+          </valuein>
+          <valueout>
+            <time>10000</time>
+            <value>5.57362</value>
+          </valueout>
+          <property>pan</property>
+          <time>0</time>
+          <value>0</value>
+          <type>linear</type>
+          <transitiontime>0</transitiontime>
+        </keyframe>
+        <keyframe>
+          <valuein>
+            <time>0</time>
+            <value>0.950745</value>
+          </valuein>
+          <valueout>
+            <time>10000</time>
+            <value>0.950788</value>
+          </valueout>
+          <property>tilt</property>
+          <time>0</time>
+          <value>0</value>
+          <type>linear</type>
+          <transitiontime>0</transitiontime>
+        </keyframe>
+        <keyframe>
+          <valuein>
+            <time>0</time>
+            <value>0</value>
+          </valuein>
+          <valueout>
+            <time>10000</time>
+            <value>70</value>
+          </valueout>
+          <property>fov</property>
+          <time>0</time>
+          <value>70</value>
+          <type>linear</type>
+          <transitiontime>0</transitiontime>
+        </keyframe>
+        <keyframe>
+          <valuein/>
+          <valueout>
+            <time>0</time>
+            <value>0</value>
+          </valueout>
+          <property>projection</property>
+          <time>0</time>
+          <transitiontime>0</transitiontime>
+          <value>4</value>
+          <type>linear</type>
+        </keyframe>
+        <length>238</length>
+        <keyframe>
+          <valuein>
+            <time>167</time>
+            <value>-26.3759</value>
+          </valuein>
+          <valueout>
+            <time>10200</time>
+            <value>-26.3759</value>
+          </valueout>
+          <property>pan</property>
+          <time>200</time>
+          <value>-26.3759</value>
+          <transitiontime>0</transitiontime>
+          <type>continuousbezier</type>
+        </keyframe>
+        <keyframe>
+          <valuein>
+            <time>167</time>
+            <value>0.739133</value>
+          </valuein>
+          <valueout>
+            <time>10200</time>
+            <value>0.739133</value>
+          </valueout>
+          <property>tilt</property>
+          <time>200</time>
+          <value>0.739133</value>
+          <transitiontime>0</transitiontime>
+          <type>continuousbezier</type>
+        </keyframe>
+        <keyframe>
+          <valuein>
+            <time>167</time>
+            <value>70</value>
+          </valuein>
+          <valueout>
+            <time>10200</time>
+            <value>70</value>
+          </valueout>
+          <property>fov</property>
+          <time>200</time>
+          <value>70</value>
+          <transitiontime>0</transitiontime>
+          <type>continuousbezier</type>
+        </keyframe>
+      </clip>
     </panorama>
     <panorama>
       <input>
@@ -499,106 +607,6 @@ Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsger
       </sounds>
       <id>node4</id>
       <clip>
-        <title>__FlyIn</title>
-        <animationtype>keyframe</animationtype>
-        <flyin>1</flyin>
-        <keyframe>
-          <valuein>
-            <time>0</time>
-            <value>0</value>
-          </valuein>
-          <valueout>
-            <time>0</time>
-            <value>0</value>
-          </valueout>
-          <property>pan</property>
-          <time>0</time>
-          <value>90.55</value>
-          <type>linear</type>
-          <transitiontime>0</transitiontime>
-        </keyframe>
-        <keyframe>
-          <valuein/>
-          <valueout>
-            <time>0</time>
-            <value>0</value>
-          </valueout>
-          <property>tilt</property>
-          <time>0</time>
-          <value>0</value>
-          <type>linear</type>
-        </keyframe>
-        <keyframe>
-          <valuein/>
-          <valueout>
-            <time>0</time>
-            <value>0</value>
-          </valueout>
-          <property>fov</property>
-          <time>0</time>
-          <value>70</value>
-          <type>linear</type>
-        </keyframe>
-        <keyframe>
-          <valuein/>
-          <valueout>
-            <time>0</time>
-            <value>0</value>
-          </valueout>
-          <property>projection</property>
-          <time>0</time>
-          <transitiontime>0</transitiontime>
-          <value>4</value>
-          <type>linear</type>
-        </keyframe>
-        <length>300</length>
-        <keyframe>
-          <valuein>
-            <time>70</time>
-            <value>27.96</value>
-          </valuein>
-          <valueout>
-            <time>130</time>
-            <value>27.96</value>
-          </valueout>
-          <property>pan</property>
-          <time>100</time>
-          <value>27.96</value>
-          <transitiontime>0</transitiontime>
-          <type>continuousbezier</type>
-        </keyframe>
-        <keyframe>
-          <valuein>
-            <time>170</time>
-            <value>-67.65</value>
-          </valuein>
-          <valueout>
-            <time>230</time>
-            <value>-67.65</value>
-          </valueout>
-          <property>pan</property>
-          <time>200</time>
-          <value>-67.65</value>
-          <transitiontime>0</transitiontime>
-          <type>continuousbezier</type>
-        </keyframe>
-        <keyframe>
-          <valuein>
-            <time>270</time>
-            <value>22.7</value>
-          </valuein>
-          <valueout>
-            <time>10300</time>
-            <value>22.7</value>
-          </valueout>
-          <property>pan</property>
-          <time>300</time>
-          <value>22.7</value>
-          <transitiontime>0</transitiontime>
-          <type>continuousbezier</type>
-        </keyframe>
-      </clip>
-      <clip>
         <title>Clip01</title>
         <animationtype>keyframe</animationtype>
         <flyin>0</flyin>
@@ -747,6 +755,9 @@ Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsger
           <syncanimwithvideo>0</syncanimwithvideo>
           <enabled>0</enabled>
           <afterloaded>1</afterloaded>
+          <noderandom>0</noderandom>
+          <nodedelay>0</nodedelay>
+          <delay>10</delay>
         </autorotate>
         <soundstransition/>
         <flyintransition>
@@ -780,6 +791,27 @@ Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsger
         <hideaboutbox>1</hideaboutbox>
       </htmlcss>
       <placeidcache>{"entries":[]}</placeidcache>
+      <thumb>
+        <html>
+          <enabled>0</enabled>
+          <filename>output/index.html</filename>
+        </html>
+        <facequality/>
+        <type>rectilinear</type>
+        <filename>output/pano.png</filename>
+      </thumb>
+      <animation>
+        <html>
+          <enabled>0</enabled>
+          <filename>output-1/index.html</filename>
+        </html>
+        <facequality/>
+        <transition>
+          <zoomafterinfov>50</zoomafterinfov>
+          <zoomafteroutfov>20</zoomafteroutfov>
+        </transition>
+        <filename>output-1/pano.tiff</filename>
+      </animation>
     </output>
     <streetview/>
     <streetviewproject/>
@@ -788,6 +820,11 @@ Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsger
       <title>Animation01</title>
       <sequenceelement>
         <nodeid>node4</nodeid>
+        <cliptitle>Clip01</cliptitle>
+        <transitiontype>cut</transitiontype>
+      </sequenceelement>
+      <sequenceelement>
+        <nodeid>node1</nodeid>
         <cliptitle>Clip01</cliptitle>
         <transitiontype>cut</transitiontype>
       </sequenceelement>
