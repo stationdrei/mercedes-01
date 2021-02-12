@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- Pano2VR project file  -->
-<pano2vrconfig version="6.1.10" rev="18007">
+<pano2vrconfig rev="18007" version="6.1.10">
   <tour>
     <panorama>
       <id>node1</id>
@@ -60,29 +60,13 @@
       <userdata>
         <capturedatetime>2020-10-29T15:24:04</capturedatetime>
         <tags>10-28</tags>
+        <title></title>
+        <altitude>-10000</altitude>
+        <usealtitude>0</usealtitude>
+        <description>intro</description>
       </userdata>
       <floorplans/>
-      <hotspots>
-        <hotspot>
-          <position/>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <polygon>
-            <polystring>-320.17/20.57|-28.36/25.48|-28.63/-32.29|-320.68/-25.28</polystring>
-            <usedefaultcolor>0</usedefaultcolor>
-            <backgroundcolor>#0000ff,64</backgroundcolor>
-            <bordercolor>#0000ff</bordercolor>
-          </polygon>
-          <type>poly</type>
-          <id>Poly02</id>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node4}</url>
-        </hotspot>
-      </hotspots>
+      <hotspots/>
       <output/>
       <streetview/>
       <streetviewproject/>
@@ -264,36 +248,7 @@
     </panorama>
     <panorama>
       <input>
-        <patch>
-          <imagepatch>
-            <pan>19</pan>
-            <tilt>0</tilt>
-            <fov>19.01</fov>
-            <roll>0</roll>
-            <aspectratio>0.9</aspectratio>
-            <applyafterlevelling>0</applyafterlevelling>
-            <locked>0</locked>
-            <quality>90</quality>
-            <filename>patches/All_patch.psd</filename>
-            <type>image</type>
-            <blurintensity>10</blurintensity>
-            <lastmodified>2020-12-17T12:05:57</lastmodified>
-          </imagepatch>
-          <imagepatch>
-            <pan>19</pan>
-            <tilt>0</tilt>
-            <fov>19.01</fov>
-            <roll>0</roll>
-            <aspectratio>0.9</aspectratio>
-            <applyafterlevelling>0</applyafterlevelling>
-            <locked>1</locked>
-            <quality>90</quality>
-            <filename>patches/All_patch.psd</filename>
-            <type>image</type>
-            <blurintensity>10</blurintensity>
-            <lastmodified>2020-12-17T12:05:57</lastmodified>
-          </imagepatch>
-        </patch>
+        <patch/>
         <type>auto</type>
         <filename>C:\Users\novos\work\Mercedes\20-12-Messe\Render\12-03\Mainz1.png</filename>
         <videotype>equi</videotype>
@@ -375,7 +330,7 @@
           <id>Point02</id>
           <title>Der Sprinter.</title>
           <description>Unser Flaggschiff ist nicht nur Namensgeber einer ganzen Fahrzeuggattung. Der Sprinter überzeugt mit jeder Generation aufs Neue durch zahlreiche Innovationen und Extras, die Ihnen das Leben so angenehm wie möglich machen.
-Sie möchten mehr über den Sprinter erfahren? &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Sprinter auf unserer Webseite.&lt;/a></description>
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Sprinter auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <target>_blank</target>
@@ -403,7 +358,7 @@ Sie möchten mehr über den Sprinter erfahren? &lt;a href="https://www.mercedes-
           <id>Point03</id>
           <title>Die V-Klasse.</title>
           <description>Unsere Großraumlimousine ist Business- und Freizeit-Van in einem. Genießen Sie die V-Klasse als komfortablen Family Van, Shuttlebus fürs Business oder stilvolles Fahrzeug für Freizeit und Abenteuer.
-Sie möchten mehr über die V-Klasse erfahren? &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über die V-Klasse auf unserer Webseite.&lt;/a></description>
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über die V-Klasse auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <skinid>ht_info_noico</skinid>
@@ -430,7 +385,7 @@ Sie möchten mehr über die V-Klasse erfahren? &lt;a href="https://www.mercedes-
           <id>Point04</id>
           <title>Der Marco Polo</title>
           <description>Unser Reisemobil für alle, die den Geschmack von Freiheit und Abenteuer lieben, aber auch auf Reisen nicht auf höchsten Komfort und innovative Technik verzichten wollen.
-Sie möchten mehr über den Marco Polo erfahren? &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Marco Polo auf unserer Webseite.&lt;/a></description>
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Marco Polo auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <skinid>ht_info_noico</skinid>
@@ -456,7 +411,8 @@ Sie möchten mehr über den Marco Polo erfahren? &lt;a href="https://www.mercede
           <type>point</type>
           <id>Point05</id>
           <title>Der Citan.</title>
-          <description>Unser kleinster Transporter bringt Sie ganz groß raus. Der Held der Stadt ist die ideale Transporter-Lösung für alle, die ein zuverlässiges und wendiges Fahrzeug benötigen, aber auf Komfort nicht verzichten wollen. Sie möchten mehr über den Citan erfahren? &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Citan auf unserer Webseite.&lt;/a></description>
+          <description>Unser kleinster Transporter bringt Sie ganz groß raus. Der Held der Stadt ist die ideale Transporter-Lösung für alle, die ein zuverlässiges und wendiges Fahrzeug benötigen, aber auf Komfort nicht verzichten wollen.
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Citan auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <target>_blank</target>
@@ -484,7 +440,7 @@ Sie möchten mehr über den Marco Polo erfahren? &lt;a href="https://www.mercede
           <id>Point06</id>
           <title>Der Vito.</title>
           <description>Unser Allrounder. Ob als Kastenwagen, Mixto oder Tourer: Der Vito ist für jeden Bedarf gerüstet und ein echtes Arbeitstier. Natürlich in Mercedes-Benz Qualität, damit die Arbeit auch Spaß macht.
-Sie möchten mehr über den Vito erfahren? &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Vito auf unserer Webseite.&lt;/a></description>
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über den Vito auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <target>_blank</target>
@@ -526,7 +482,7 @@ Ich freue mich auf Sie!</description>
         <hotspot>
           <position>
             <pan>-4.79</pan>
-            <tilt>-3.77</tilt>
+            <tilt>-3.69</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -539,7 +495,8 @@ Ich freue mich auf Sie!</description>
           <id>Point07</id>
           <title>Die eVans.</title>
           <description>Unsere eVans begleiten Sie auf dem Weg in eine emissionsfreie Zukunft.
-Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsgerechten Lösungen alles, was Sie sich für Ihr Business und eine emissionsfreie Zukunft wünschen. Falls Sie etwas mehr Platz benötigen: unseren großen Transporter gibt es ebenfalls mit elektrischem Antrieb: der eSprinter. &lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über unsere eVans auf unserer Webseite.&lt;/a></description>
+Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsgerechten Lösungen alles, was Sie sich für Ihr Business und eine emissionsfreie Zukunft wünschen. Falls Sie etwas mehr Platz benötigen: unseren großen Transporter gibt es ebenfalls mit elektrischem Antrieb: der eSprinter.
+&lt;a href="https://www.mercedes-benz-vans.de" target="_blank">Erfahren Sie mehr über unsere eVans auf unserer Webseite.&lt;/a></description>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
           <skinid>ht_info_noico</skinid>
@@ -772,7 +729,7 @@ Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsger
         </webvr>
         <tilesize>2048</tilesize>
         <filename>pano.xml</filename>
-        <skinfile>$d/simplex_Merc1.ggsk</skinfile>
+        <skinfile>$d/simplex_Merc1m.ggsk</skinfile>
         <quality>93</quality>
         <skinconfiguration>
           <value id="opt_projection">false</value>

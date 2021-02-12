@@ -1,102 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tour appversion="6.1.10" start="node1" apprev="18007">
+<tour start="node1" apprev="18007" appversion="6.1.10">
   <panorama id="node1" hideabout="1">
-    <input levelbiashidpi="1.000" levelbias="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2048" levelingroll="0" leveltilesize="510" width="2048" overlap="1" levelingpitch="0">
-      <level preload="0" predecode="0" height="2048" width="2048"/>
-      <level preload="0" predecode="0" height="1024" width="1024"/>
-      <level preload="0" predecode="0" height="512" width="512"/>
-      <level preload="1" predecode="1" height="256" width="256"/>
-      <preview color="0x808080" strip="1"/>
+    <input levelingpitch="0" height="2048" width="2048" levelbiashidpi="1.000" levelbias="0.400" levelingroll="0" overlap="1" leveltilesize="510" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level preload="0" height="2048" width="2048" predecode="0"/>
+      <level preload="0" height="1024" width="1024" predecode="0"/>
+      <level preload="0" height="512" width="512" predecode="0"/>
+      <level preload="1" height="256" width="256" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" fov="70" tilt="0" pan="0"/>
-      <flyin projection="4" fov="120" tilt="0.69" pan="-15.34"/>
-      <min tilt="-90" fovpixel="2" pan="-112.76"/>
-      <max scaletofit="1" fov="120" tilt="90" fovfisheye="360" pan="139.76" fovstereographic="270"/>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" projection="4" pan="0" tilt="0"/>
+      <flyin fov="120" projection="4" pan="-15.34" tilt="0.69"/>
+      <min pan="-112.76" fovpixel="2" tilt="-90"/>
+      <max fov="120" fovfisheye="360" pan="139.76" fovstereographic="270" scaletofit="1" tilt="90"/>
     </view>
-    <userdata author="" heading="0" source="" info="" customnodeid="" datetime="" longitude="" tags="10-28" description="" nodeid="node1" comment="" title="" copyright="" latitude=""/>
-    <hotspots wordwrap="1" height="20" width="180">
-      <label wordwrap="1" borderalpha="1" borderradius="1" bordercolor="0x000000" background="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" width="180" border="1" textalpha="1" enabled="1" textcolor="0x000000"/>
-      <polystyle borderalpha="1" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff"/>
-      <polyhotspot id="Poly02" borderalpha="1" target="" bordercolor="0x0000ff" description="" url="{node4}" backgroundalpha="0.25098" title="" backgroundcolor="0x0000ff">
-        <polystring>-320.17/20.57|-28.36/25.48|-28.63/-32.29|-320.68/-25.28</polystring>
-      </polyhotspot>
+    <userdata customnodeid="" author="" nodeid="node1" datetime="" latitude="" title="" source="" description="intro" comment="" longitude="" heading="0" tags="10-28" copyright="" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" enabled="1" background="1" width="180" bordercolor="0x000000" textcolor="0x000000" backgroundalpha="1" borderalpha="1" backgroundcolor="0xffffff" border="1" wordwrap="1" textalpha="1" borderradius="1"/>
+      <polystyle mode="0" handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" backgroundcolor="0x0000ff"/>
     </hotspots>
     <media>
-      <video pansize="10.000" rotz="0.000" tiltsize="10.000" handcursor="1" roty="0.000" rotx="0.000" width="1360" field="90.000" stretch="1.000" level="1.000" startmutedmobile="1" pan="0.000" fov="54.870" loop="1" tilt="1.000" id="Element02" nodechangekeep="0" height="1360" mode="1" clickmode="0" ambientlevel="0.000">
+      <video handcursor="1" mode="1" level="1.000" tiltsize="10.000" ambientlevel="0.000" id="Element02" fov="54.870" stretch="1.000" pansize="10.000" startmutedmobile="1" rotx="0.000" loop="1" tilt="1.000" rotz="0.000" height="1360" nodechangekeep="0" field="90.000" pan="0.000" width="1360" roty="0.000" clickmode="0">
         <source url="media/intro_patch_Mercedes_01.mp4"/>
       </video>
-      <image clickmode="0" id="Element01" fov="54.870" tilt="1.000" roty="0.000" stretch="1.000" handcursor="0" rotz="0.000" height="1360" rotx="0.000" width="1360" pan="0.000">
+      <image fov="54.870" handcursor="0" id="Element01" clickmode="0" rotz="0.000" height="1360" width="1360" pan="0.000" stretch="1.000" rotx="0.000" roty="0.000" tilt="1.000">
         <source url="media/intro_patch_blank.png"/>
       </image>
     </media>
-    <transition blendtime="1" blendcolor="0x000000" zoomout="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" zoomafterinfov="90" enabled="0" zoomafteroutfov="20" zoomoutpause="1"/>
-    <animation animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0">
-      <clip nextclipstartview="41.3313/-2.07236/70/4" animtype="0" length="238" transitiontype="0" animtitle="Animation01" nodeid="" nextclipnodeid="node4" cliptitle="Clip01" nextcliptitle="Clip01">
-        <keyframe transitiontime="0" property="0" valuestring="" time="0" type="0" value="0" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="1" valuestring="" time="0" type="0" value="0" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="2" valuestring="" time="0" type="0" value="70" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="3" valuestring="" time="0" type="0" value="4" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="0" valuestring="" time="200" bezierintime="167" bezierouttime="10200" type="2" bezieroutvalue="-26.3759" value="-26.3759" additionaltrackid="" bezierinvalue="-26.3759"/>
-        <keyframe transitiontime="0" property="1" valuestring="" time="200" bezierintime="167" bezierouttime="10200" type="2" bezieroutvalue="0.739133" value="0.739133" additionaltrackid="" bezierinvalue="0.739133"/>
-        <keyframe transitiontime="0" property="2" valuestring="" time="200" bezierintime="167" bezierouttime="10200" type="2" bezieroutvalue="70" value="70" additionaltrackid="" bezierinvalue="70"/>
+    <transition zoomspeed="2" zoomafteroutfov="20" zoomin="0" blendtime="1" enabled="0" zoomfov="20" zoomoutpause="1" type="crossdissolve" zoomout="0" zoomafterinfov="90" softedge="0" blendcolor="0x000000"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0">
+      <clip nextcliptitle="Clip01" nodeid="" nextclipstartview="41.3313/-2.07236/70/4" nextclipnodeid="node4" animtitle="Animation01" length="238" animtype="0" transitiontype="0" cliptitle="Clip01">
+        <keyframe transitiontime="0" property="0" additionaltrackid="" value="0" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="1" additionaltrackid="" value="0" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="2" additionaltrackid="" value="70" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="3" additionaltrackid="" value="4" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="0" bezierintime="167" additionaltrackid="" value="-26.3759" bezieroutvalue="-26.3759" bezierinvalue="-26.3759" valuestring="" type="2" time="200" bezierouttime="10200"/>
+        <keyframe transitiontime="0" property="1" bezierintime="167" additionaltrackid="" value="0.739133" bezieroutvalue="0.739133" bezierinvalue="0.739133" valuestring="" type="2" time="200" bezierouttime="10200"/>
+        <keyframe transitiontime="0" property="2" bezierintime="167" additionaltrackid="" value="70" bezieroutvalue="70" bezierinvalue="70" valuestring="" type="2" time="200" bezierouttime="10200"/>
       </clip>
     </animation>
-    <control simulatemass="1" lockedkeyboardzoom="0" lockedwheel="0" sensitivity="8" rubberband="0" contextprojections="0" invertwheel="0" lockedmouse="0" speedwheel="1" invertcontrol="1" contextfullscreen="1" hideabout="1" lockedkeyboard="0" dblclickfullscreen="0"/>
+    <control simulatemass="1" lockedwheel="0" invertwheel="0" rubberband="0" contextfullscreen="1" lockedmouse="0" invertcontrol="1" lockedkeyboard="0" speedwheel="1" lockedkeyboardzoom="0" dblclickfullscreen="0" contextprojections="0" sensitivity="8" hideabout="1"/>
   </panorama>
   <panorama id="node4" hideabout="1">
-    <input levelbiashidpi="1.000" levelbias="0.400" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2048" levelingroll="0" leveltilesize="510" width="2048" overlap="1" levelingpitch="0">
-      <level preload="0" predecode="0" height="2048" width="2048"/>
-      <level preload="0" predecode="0" height="1024" width="1024"/>
-      <level preload="0" predecode="0" height="512" width="512"/>
-      <level preload="1" predecode="1" height="256" width="256"/>
-      <preview color="0x808080" strip="1"/>
+    <input levelingpitch="0" height="2048" width="2048" levelbiashidpi="1.000" levelbias="0.400" levelingroll="0" overlap="1" leveltilesize="510" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level preload="0" height="2048" width="2048" predecode="0"/>
+      <level preload="0" height="1024" width="1024" predecode="0"/>
+      <level preload="0" height="512" width="512" predecode="0"/>
+      <level preload="1" height="256" width="256" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="0">
-      <start projection="4" fov="70" tilt="0" pan="0"/>
-      <flyin projection="4" fov="170" tilt="-90" pan="0"/>
-      <min tilt="-90" fovpixel="2" pan="-126.8"/>
-      <max scaletofit="1" fov="120" tilt="90" fovfisheye="360" pan="131.04" fovstereographic="270"/>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="4" pan="0" tilt="-90"/>
+      <min pan="-126.8" fovpixel="2" tilt="-90"/>
+      <max fov="120" fovfisheye="360" pan="131.04" fovstereographic="270" scaletofit="1" tilt="90"/>
     </view>
-    <userdata author="" heading="0" source="" info="" customnodeid="" datetime="" longitude="" tags="10-28" description="" nodeid="node4" comment="" title="" copyright="" latitude=""/>
-    <hotspots wordwrap="1" height="20" width="180">
-      <label wordwrap="1" borderalpha="1" borderradius="1" bordercolor="0x000000" background="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" width="180" border="1" textalpha="1" enabled="1" textcolor="0x000000"/>
-      <polystyle borderalpha="1" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.25098" mode="0" backgroundcolor="0x0000ff"/>
-      <hotspot id="Point01" target="" tilt="-5.33" description="" url="media/Vans509258-1.m4v" skinid="ht_video_file" title="" pan="-77.96"/>
-      <hotspot id="Point02" target="_blank" tilt="-4.36" description="Unser Flaggschiff ist nicht nur Namensgeber einer ganzen Fahrzeuggattung. Der Sprinter überzeugt mit jeder Generation aufs Neue durch zahlreiche Innovationen und Extras, die Ihnen das Leben so angenehm wie möglich machen.&#xa;Sie möchten mehr über den Sprinter erfahren? &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Sprinter auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Der Sprinter." pan="-283.7"/>
-      <hotspot id="Point03" target="_blank" tilt="-3.37" description="Unsere Großraumlimousine ist Business- und Freizeit-Van in einem. Genießen Sie die V-Klasse als komfortablen Family Van, Shuttlebus fürs Business oder stilvolles Fahrzeug für Freizeit und Abenteuer.&#xa;Sie möchten mehr über die V-Klasse erfahren? &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über die V-Klasse auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Die V-Klasse." pan="-22.45"/>
-      <hotspot id="Point04" target="_blank" tilt="-2.91" description="Unser Reisemobil für alle, die den Geschmack von Freiheit und Abenteuer lieben, aber auch auf Reisen nicht auf höchsten Komfort und innovative Technik verzichten wollen.&#xa;Sie möchten mehr über den Marco Polo erfahren? &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Marco Polo auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Der Marco Polo" pan="-36.87"/>
-      <hotspot id="Point05" target="_blank" tilt="-3.34" description="Unser kleinster Transporter bringt Sie ganz groß raus. Der Held der Stadt ist die ideale Transporter-Lösung für alle, die ein zuverlässiges und wendiges Fahrzeug benötigen, aber auf Komfort nicht verzichten wollen. Sie möchten mehr über den Citan erfahren? &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Citan auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Der Citan." pan="-314.99"/>
-      <hotspot id="Point06" target="_blank" tilt="-3.79" description="Unser Allrounder. Ob als Kastenwagen, Mixto oder Tourer: Der Vito ist für jeden Bedarf gerüstet und ein echtes Arbeitstier. Natürlich in Mercedes-Benz Qualität, damit die Arbeit auch Spaß macht.&#xa;Sie möchten mehr über den Vito erfahren? &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Vito auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Der Vito." pan="-302.09"/>
-      <hotspot id="Point08" target="_blank" tilt="-9.84" description="Dann klicken sie &lt;a href=https://eqv.mercedes-benz.de/?ef_id=Cj0KCQiA-rj9BRCAARIsANB_4ADqDoO8Re0DnMxxqNJsw-mPaO8iCLMywQxyfzMvSMMEu_Wu0DeHC7YaAkJlEALw_wcB:G:s&amp;s_kwcid=AL!3888!3!437408622435!e!!g!!eqv&amp;csref=mc-sem_cn-MB_EQV_Brand_ci-Google_si-g_pi-kwd-343382295766_cri-437408622435_ai-eqv&amp;kpid=go_cmp-8619295423_adg-87161355579_ad-437408622435_kwd-343382295766_dev-c_ext-&quot; target=&quot;_blank&quot;>hier&lt;/a> oder wenden Sie sich gleich telefonisch an mich unter: &lt;a href=&quot;tel:+496131367526&quot;>06131 367526&lt;/a> oder per Mail an &lt;a href=&quot;mailto:kevin.danner@daimler.com&quot;>kevin.danner@daimler.com&lt;/a>&#xa;Ich freue mich auf Sie!" url="" skinid="ht_info_noico" title="Sie möchten mehr über den EQV erfahren?" pan="-83.86"/>
-      <hotspot id="Point07" target="_blank" tilt="-3.77" description="Unsere eVans begleiten Sie auf dem Weg in eine emissionsfreie Zukunft.&#xa;Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsgerechten Lösungen alles, was Sie sich für Ihr Business und eine emissionsfreie Zukunft wünschen. Falls Sie etwas mehr Platz benötigen: unseren großen Transporter gibt es ebenfalls mit elektrischem Antrieb: der eSprinter. &lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über unsere eVans auf unserer Webseite.&lt;/a>" url="" skinid="ht_info_noico" title="Die eVans." pan="-4.79"/>
-      <polyhotspot id="Poly01" target="_blank" description="video/kd2.mp4" url="" title="">
+    <userdata customnodeid="" author="" nodeid="node4" datetime="" latitude="" title="" source="" description="" comment="" longitude="" heading="0" tags="10-28" copyright="" info=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" enabled="1" background="1" width="180" bordercolor="0x000000" textcolor="0x000000" backgroundalpha="1" borderalpha="1" backgroundcolor="0xffffff" border="1" wordwrap="1" textalpha="1" borderradius="1"/>
+      <polystyle mode="0" handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" backgroundcolor="0x0000ff"/>
+      <hotspot skinid="ht_video_file" id="Point01" title="" target="" description="" pan="-77.96" url="media/Vans509258-1.m4v" tilt="-5.33"/>
+      <hotspot skinid="ht_info_noico" id="Point02" title="Der Sprinter." target="_blank" description="Unser Flaggschiff ist nicht nur Namensgeber einer ganzen Fahrzeuggattung. Der Sprinter überzeugt mit jeder Generation aufs Neue durch zahlreiche Innovationen und Extras, die Ihnen das Leben so angenehm wie möglich machen.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Sprinter auf unserer Webseite.&lt;/a>" pan="-283.7" url="" tilt="-4.36"/>
+      <hotspot skinid="ht_info_noico" id="Point03" title="Die V-Klasse." target="_blank" description="Unsere Großraumlimousine ist Business- und Freizeit-Van in einem. Genießen Sie die V-Klasse als komfortablen Family Van, Shuttlebus fürs Business oder stilvolles Fahrzeug für Freizeit und Abenteuer.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über die V-Klasse auf unserer Webseite.&lt;/a>" pan="-22.45" url="" tilt="-3.37"/>
+      <hotspot skinid="ht_info_noico" id="Point04" title="Der Marco Polo" target="_blank" description="Unser Reisemobil für alle, die den Geschmack von Freiheit und Abenteuer lieben, aber auch auf Reisen nicht auf höchsten Komfort und innovative Technik verzichten wollen.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Marco Polo auf unserer Webseite.&lt;/a>" pan="-36.87" url="" tilt="-2.91"/>
+      <hotspot skinid="ht_info_noico" id="Point05" title="Der Citan." target="_blank" description="Unser kleinster Transporter bringt Sie ganz groß raus. Der Held der Stadt ist die ideale Transporter-Lösung für alle, die ein zuverlässiges und wendiges Fahrzeug benötigen, aber auf Komfort nicht verzichten wollen.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Citan auf unserer Webseite.&lt;/a>" pan="-314.99" url="" tilt="-3.34"/>
+      <hotspot skinid="ht_info_noico" id="Point06" title="Der Vito." target="_blank" description="Unser Allrounder. Ob als Kastenwagen, Mixto oder Tourer: Der Vito ist für jeden Bedarf gerüstet und ein echtes Arbeitstier. Natürlich in Mercedes-Benz Qualität, damit die Arbeit auch Spaß macht.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über den Vito auf unserer Webseite.&lt;/a>" pan="-302.09" url="" tilt="-3.79"/>
+      <hotspot skinid="ht_info_noico" id="Point08" title="Sie möchten mehr über den EQV erfahren?" target="_blank" description="Dann klicken sie &lt;a href=https://eqv.mercedes-benz.de/?ef_id=Cj0KCQiA-rj9BRCAARIsANB_4ADqDoO8Re0DnMxxqNJsw-mPaO8iCLMywQxyfzMvSMMEu_Wu0DeHC7YaAkJlEALw_wcB:G:s&amp;s_kwcid=AL!3888!3!437408622435!e!!g!!eqv&amp;csref=mc-sem_cn-MB_EQV_Brand_ci-Google_si-g_pi-kwd-343382295766_cri-437408622435_ai-eqv&amp;kpid=go_cmp-8619295423_adg-87161355579_ad-437408622435_kwd-343382295766_dev-c_ext-&quot; target=&quot;_blank&quot;>hier&lt;/a> oder wenden Sie sich gleich telefonisch an mich unter: &lt;a href=&quot;tel:+496131367526&quot;>06131 367526&lt;/a> oder per Mail an &lt;a href=&quot;mailto:kevin.danner@daimler.com&quot;>kevin.danner@daimler.com&lt;/a>&#xa;Ich freue mich auf Sie!" pan="-83.86" url="" tilt="-9.84"/>
+      <hotspot skinid="ht_info_noico" id="Point07" title="Die eVans." target="_blank" description="Unsere eVans begleiten Sie auf dem Weg in eine emissionsfreie Zukunft.&#xa;Der eVito bietet als Kastenwagen oder Tourer mit vielen Varianten und bedarfsgerechten Lösungen alles, was Sie sich für Ihr Business und eine emissionsfreie Zukunft wünschen. Falls Sie etwas mehr Platz benötigen: unseren großen Transporter gibt es ebenfalls mit elektrischem Antrieb: der eSprinter.&#xa;&lt;a href=&quot;https://www.mercedes-benz-vans.de&quot; target=&quot;_blank&quot;>Erfahren Sie mehr über unsere eVans auf unserer Webseite.&lt;/a>" pan="-4.79" url="" tilt="-3.69"/>
+      <polyhotspot id="Poly01" title="" target="_blank" description="video/kd2.mp4" url="">
         <polystring>-332.71/-6.46|-347.07/-7.23|-347.15/7.77|-332.65/7.08</polystring>
       </polyhotspot>
     </hotspots>
     <media>
-      <image clickmode="0" id="Element01" fov="19.010" tilt="0.000" roty="0.000" stretch="1.000" handcursor="0" rotz="0.000" height="496" rotx="0.000" width="448" pan="19.000">
+      <image fov="19.010" handcursor="0" id="Element01" clickmode="0" rotz="0.000" height="496" width="448" pan="19.000" stretch="1.000" rotx="0.000" roty="0.000" tilt="0.000">
         <source url="media/01--man.png"/>
       </image>
     </media>
-    <transition blendtime="1" blendcolor="0x000000" zoomout="0" type="crossdissolve" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" zoomafterinfov="90" enabled="0" zoomafteroutfov="20" zoomoutpause="1"/>
-    <animation animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0">
-      <clip nextclipstartview="0/0/70/4" animtype="0" length="200" transitiontype="0" animtitle="Animation01" nodeid="" nextclipnodeid="node1" cliptitle="Clip01" nextcliptitle="Clip01">
-        <keyframe transitiontime="0" property="0" valuestring="" time="0" type="0" value="41.3313" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="1" valuestring="" time="0" type="0" value="-2.07236" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="2" valuestring="" time="0" type="0" value="70" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="3" valuestring="" time="0" type="0" value="4" additionaltrackid=""/>
-        <keyframe transitiontime="0" property="0" valuestring="" time="100" bezierintime="70" bezierouttime="130" type="2" bezieroutvalue="-75.5328" value="-75.5328" additionaltrackid="" bezierinvalue="-75.5328"/>
-        <keyframe transitiontime="0" property="1" valuestring="" time="100" bezierintime="70" bezierouttime="130" type="2" bezieroutvalue="-1.0228" value="-1.0228" additionaltrackid="" bezierinvalue="-1.0228"/>
-        <keyframe transitiontime="0" property="2" valuestring="" time="100" bezierintime="70" bezierouttime="130" type="2" bezieroutvalue="70" value="70" additionaltrackid="" bezierinvalue="70"/>
-        <keyframe transitiontime="0" property="0" valuestring="" time="200" bezierintime="170" bezierouttime="0" type="1" bezieroutvalue="0" value="41.3313" additionaltrackid="" bezierinvalue="41.3313"/>
-        <keyframe transitiontime="0" property="1" valuestring="" time="200" bezierintime="170" bezierouttime="0" type="1" bezieroutvalue="0" value="-2.07236" additionaltrackid="" bezierinvalue="-2.07236"/>
-        <keyframe transitiontime="0" property="2" valuestring="" time="200" bezierintime="170" bezierouttime="0" type="1" bezieroutvalue="0" value="70" additionaltrackid="" bezierinvalue="70"/>
+    <transition zoomspeed="2" zoomafteroutfov="20" zoomin="0" blendtime="1" enabled="0" zoomfov="20" zoomoutpause="1" type="crossdissolve" zoomout="0" zoomafterinfov="90" softedge="0" blendcolor="0x000000"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0">
+      <clip nextcliptitle="Clip01" nodeid="" nextclipstartview="0/0/70/4" nextclipnodeid="node1" animtitle="Animation01" length="200" animtype="0" transitiontype="0" cliptitle="Clip01">
+        <keyframe transitiontime="0" property="0" additionaltrackid="" value="41.3313" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="1" additionaltrackid="" value="-2.07236" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="2" additionaltrackid="" value="70" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="3" additionaltrackid="" value="4" valuestring="" type="0" time="0"/>
+        <keyframe transitiontime="0" property="0" bezierintime="70" additionaltrackid="" value="-75.5328" bezieroutvalue="-75.5328" bezierinvalue="-75.5328" valuestring="" type="2" time="100" bezierouttime="130"/>
+        <keyframe transitiontime="0" property="1" bezierintime="70" additionaltrackid="" value="-1.0228" bezieroutvalue="-1.0228" bezierinvalue="-1.0228" valuestring="" type="2" time="100" bezierouttime="130"/>
+        <keyframe transitiontime="0" property="2" bezierintime="70" additionaltrackid="" value="70" bezieroutvalue="70" bezierinvalue="70" valuestring="" type="2" time="100" bezierouttime="130"/>
+        <keyframe transitiontime="0" property="0" bezierintime="170" additionaltrackid="" value="41.3313" bezieroutvalue="0" bezierinvalue="41.3313" valuestring="" type="1" time="200" bezierouttime="0"/>
+        <keyframe transitiontime="0" property="1" bezierintime="170" additionaltrackid="" value="-2.07236" bezieroutvalue="0" bezierinvalue="-2.07236" valuestring="" type="1" time="200" bezierouttime="0"/>
+        <keyframe transitiontime="0" property="2" bezierintime="170" additionaltrackid="" value="70" bezieroutvalue="0" bezierinvalue="70" valuestring="" type="1" time="200" bezierouttime="0"/>
       </clip>
     </animation>
-    <control simulatemass="1" lockedkeyboardzoom="0" lockedwheel="0" sensitivity="8" rubberband="0" contextprojections="0" invertwheel="0" lockedmouse="0" speedwheel="1" invertcontrol="1" contextfullscreen="1" hideabout="1" lockedkeyboard="0" dblclickfullscreen="0"/>
+    <control simulatemass="1" lockedwheel="0" invertwheel="0" rubberband="0" contextfullscreen="1" lockedmouse="0" invertcontrol="1" lockedkeyboard="0" speedwheel="1" lockedkeyboardzoom="0" dblclickfullscreen="0" contextprojections="0" sensitivity="8" hideabout="1"/>
   </panorama>
   <masternode>
-    <userdata author="" heading="0" source="" info="" customnodeid="" datetime="" longitude="" tags="" description="" nodeid="master" comment="" title="" copyright="" latitude=""/>
+    <userdata customnodeid="" author="" nodeid="master" datetime="" latitude="" title="" source="" description="" comment="" longitude="" heading="0" tags="" copyright="" info=""/>
   </masternode>
 </tour>
