@@ -60,7 +60,7 @@
       <userdata>
         <capturedatetime>2020-10-29T15:24:04</capturedatetime>
         <tags>10-28</tags>
-        <title></title>
+        <title/>
         <altitude>-10000</altitude>
         <usealtitude>0</usealtitude>
         <description>intro</description>
@@ -90,7 +90,7 @@
           <filename>C:/Users/novos/work/Mercedes/20-12-Messe/MP4/02-09-Patches/intro_patch_Mercedes_01.mp4</filename>
           <mode>1</mode>
           <nodechangekeep>0</nodechangekeep>
-          <locked>0</locked>
+          <locked>1</locked>
           <pansize>10</pansize>
           <tiltsize>10</tiltsize>
           <fieldsize>90</fieldsize>
@@ -100,7 +100,7 @@
           <loop>1</loop>
           <copyfile>1</copyfile>
           <clickmode>none</clickmode>
-          <handcursor>1</handcursor>
+          <handcursor>0</handcursor>
         </sound>
         <sound>
           <position>
