@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.10/18007
 // Filename: simplex_Merc1m.ggsk
-// Generated 2021-02-16T13:43:36
+// Generated 2021-02-16T18:42:11
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_hotspot_preview', 2, true);
@@ -7664,12 +7664,12 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='height : 314px;';
+		hs+='height : 350px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 320px;';
+		hs+='width : 350px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -7688,7 +7688,8 @@ function pano2vrSkin(player,base) {
 		me._wellcome_m.logicBlock_size = function() {
 			var newLogicStateSize;
 			if (
-				((player.getViewerSize().width < 320))
+				((player.getViewerSize().width < 330)) || 
+				((player.getViewerSize().height < 330))
 			)
 			{
 				newLogicStateSize = 0;
@@ -7700,13 +7701,13 @@ function pano2vrSkin(player,base) {
 				me._wellcome_m.ggCurrentLogicStateSize = newLogicStateSize;
 				me._wellcome_m.style[domTransition]='width 0s, height 0s';
 				if (me._wellcome_m.ggCurrentLogicStateSize == 0) {
-					me._wellcome_m.style.width='300px';
-					me._wellcome_m.style.height='312px';
+					me._wellcome_m.style.width='310px';
+					me._wellcome_m.style.height='310px';
 					skin.updateSize(me._wellcome_m);
 				}
 				else {
-					me._wellcome_m.style.width='320px';
-					me._wellcome_m.style.height='314px';
+					me._wellcome_m.style.width='350px';
+					me._wellcome_m.style.height='350px';
 					skin.updateSize(me._wellcome_m);
 				}
 			}
@@ -7729,6 +7730,8 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._welcomebgm=document.createElement('div');
 		el.ggId="welcome-bg-m";
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -7737,12 +7740,12 @@ function pano2vrSkin(player,base) {
 		hs+='background : rgba(0,0,0,0.784314);';
 		hs+='border : 1px solid #ffffff;';
 		hs+='cursor : default;';
-		hs+='height : 313px;';
-		hs+='left : 0px;';
+		hs+='height : 100%;';
+		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='top : 0px;';
+		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 320px;';
+		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -7758,37 +7761,24 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._welcomebgm.logicBlock_size = function() {
-			var newLogicStateSize;
-			if (
-				((player.getIsMobile() == true)) && 
-				((player.getViewerSize().width <= 320))
-			)
-			{
-				newLogicStateSize = 0;
-			}
-			else {
-				newLogicStateSize = -1;
-			}
-			if (me._welcomebgm.ggCurrentLogicStateSize != newLogicStateSize) {
-				me._welcomebgm.ggCurrentLogicStateSize = newLogicStateSize;
-				me._welcomebgm.style[domTransition]='width 0s, height 0s';
-				if (me._welcomebgm.ggCurrentLogicStateSize == 0) {
-					me._welcomebgm.style.width='314px';
-					me._welcomebgm.style.height='312px';
-					skin.updateSize(me._welcomebgm);
-				}
-				else {
-					me._welcomebgm.style.width='320px';
-					me._welcomebgm.style.height='313px';
-					skin.updateSize(me._welcomebgm);
-				}
-			}
-		}
 		me._welcomebgm.onclick=function (e) {
 			player.openNext("{node4}","");
 		}
 		me._welcomebgm.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
 		}
 		me._wellcome_m.appendChild(me._welcomebgm);
 		el=me._text_m=document.createElement('div');
@@ -7796,17 +7786,19 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="Text_M";
+		el.ggDx=0;
+		el.ggDy=-8;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text info_body";
 		el.ggType='text';
 		hs ='';
-		hs+='height : 300px;';
-		hs+='left : 9px;';
+		hs+='height : 284px;';
+		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='top : 4px;';
+		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 309px;';
+		hs+='width : 306px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -7815,8 +7807,8 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='left: 0px;';
 		hs+='top:  0px;';
-		hs+='width: 309px;';
-		hs+='height: 300px;';
+		hs+='width: 306px;';
+		hs+='height: auto;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
 		hs+='text-align: left;';
@@ -7824,7 +7816,7 @@ function pano2vrSkin(player,base) {
 		hs+='padding: 0px 1px 0px 1px;';
 		hs+='overflow: hidden;';
 		els.setAttribute('style',hs);
-		els.innerHTML="Herzlich Willkommen in meinem virtuellen Showroom!<br\/> <br\/>Mein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung. <br\/><br\/>Ich freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol. <br\/>Bei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
+		els.innerHTML="Herzlich Willkommen in meinem virtuellen Showroom!<br\/><br\/>Mein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung.<br\/><br\/>Ich freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol.<br\/>Bei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
 		el.appendChild(els);
 		me._text_m.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
@@ -7838,7 +7830,70 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
+		me._text_m.logicBlock_text = function() {
+			var newLogicStateText;
+			if (
+				((player.getViewerSize().width < 330)) || 
+				((player.getViewerSize().height < 330))
+			)
+			{
+				newLogicStateText = 0;
+			}
+			else {
+				newLogicStateText = -1;
+			}
+			if (me._text_m.ggCurrentLogicStateText != newLogicStateText) {
+				me._text_m.ggCurrentLogicStateText = newLogicStateText;
+				me._text_m.style[domTransition]='';
+				if (me._text_m.ggCurrentLogicStateText == 0) {
+					me._text_m.ggText="Herzlich Willkommen in meinem virtuellen Showroom!<br><br>Mein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung.<br>Ich freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol. \nBei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
+					me._text_m__text.innerHTML=me._text_m.ggText;
+					if (me._text_m.ggUpdateText) {
+					me._text_m.ggUpdateText=function() {
+						var hs="Herzlich Willkommen in meinem virtuellen Showroom!<br><br>Mein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung.<br>Ich freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol. \nBei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+					} else {
+						if (me._text_m.ggUpdatePosition) me._text_m.ggUpdatePosition();
+					}
+				}
+				else {
+					me._text_m.ggText="Herzlich Willkommen in meinem virtuellen Showroom!\n\nMein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung.\n\nIch freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol.\nBei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
+					me._text_m__text.innerHTML=me._text_m.ggText;
+					if (me._text_m.ggUpdateText) {
+					me._text_m.ggUpdateText=function() {
+						var hs="Herzlich Willkommen in meinem virtuellen Showroom!\n\nMein Name ist Kevin Danner und ich bin Ihr Ansprechpartner, wenn es um Vans, eVans und Transporter von Mercedes-Benz geht und zust\xe4ndig f\xfcr das Gebiet Bingen und Umgebung.\n\nIch freue mich, dass Sie bei mir sind. Kommen Sie gerne rein und schauen Sie sich um. Wenn Sie n\xe4here Informationen zu einem der Fahrzeuge haben wollen, klicken Sie einfach auf das entsprechende Informations-Symbol.\nBei Interesse oder sonstigen Fragen, kontaktieren Sie mich immer gerne!";
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+					} else {
+						if (me._text_m.ggUpdatePosition) me._text_m.ggUpdatePosition();
+					}
+				}
+			}
+		}
 		me._text_m.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth + 0;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
 		}
 		me._wellcome_m.appendChild(me._text_m);
 		el=me._rectangle_m=document.createElement('div');
@@ -7851,9 +7906,9 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='background : #00b5ff;';
 		hs+='border : 0px solid #000000;';
-		hs+='bottom : 12px;';
+		hs+='bottom : 18px;';
 		hs+='cursor : pointer;';
-		hs+='height : 28px;';
+		hs+='height : 24px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
@@ -7895,7 +7950,7 @@ function pano2vrSkin(player,base) {
 		el.ggTextDiv=els;
 		el.ggId="Go_M";
 		el.ggDx=0;
-		el.ggDy=0;
+		el.ggDy=1;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text info_body";
@@ -7907,7 +7962,7 @@ function pano2vrSkin(player,base) {
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
-		hs+='width : 82px;';
+		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -7915,11 +7970,11 @@ function pano2vrSkin(player,base) {
 		hs += 'box-sizing: border-box;';
 		hs+='left: 0px;';
 		hs+='top:  0px;';
-		hs+='width: 82px;';
+		hs+='width: 100%;';
 		hs+='height: 18px;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
-		hs+='text-align: left;';
+		hs+='text-align: center;';
 		hs+='white-space: pre-wrap;';
 		hs+='padding: 0px 1px 0px 1px;';
 		hs+='overflow: hidden;';
@@ -7947,7 +8002,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (this.parentNode) {
 				var pw=this.parentNode.clientWidth;
-				var w=this.offsetWidth + 0;
+				var w=this.offsetWidth;
 					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
 				var ph=this.parentNode.clientHeight;
 				var h=this.offsetHeight;
@@ -11474,12 +11529,12 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='height : 318px;';
+		hs+='height : 340px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
 		hs+='visibility : hidden;';
-		hs+='width : 318px;';
+		hs+='width : 340px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -11488,6 +11543,33 @@ function pano2vrSkin(player,base) {
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me._information.logicBlock_size = function() {
+			var newLogicStateSize;
+			if (
+				((player.getViewerSize().height <= 330)) || 
+				((player.getViewerSize().width <= 330))
+			)
+			{
+				newLogicStateSize = 0;
+			}
+			else {
+				newLogicStateSize = -1;
+			}
+			if (me._information.ggCurrentLogicStateSize != newLogicStateSize) {
+				me._information.ggCurrentLogicStateSize = newLogicStateSize;
+				me._information.style[domTransition]='width 0s, height 0s';
+				if (me._information.ggCurrentLogicStateSize == 0) {
+					me._information.style.width='318px';
+					me._information.style.height='318px';
+					skin.updateSize(me._information);
+				}
+				else {
+					me._information.style.width='340px';
+					me._information.style.height='340px';
+					skin.updateSize(me._information);
+				}
+			}
 		}
 		me._information.logicBlock_visible = function() {
 			var newLogicStateVisible;
@@ -11502,7 +11584,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._information.ggCurrentLogicStateVisible != newLogicStateVisible) {
 				me._information.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._information.style[domTransition]='';
+				me._information.style[domTransition]='width 0s, height 0s';
 				if (me._information.ggCurrentLogicStateVisible == 0) {
 					me._information.style.visibility=(Number(me._information.style.opacity)>0||!me._information.style.opacity)?'inherit':'hidden';
 					me._information.ggVisible=true;
@@ -11544,12 +11626,12 @@ function pano2vrSkin(player,base) {
 		hs+='background : rgba(0,0,0,0.509804);';
 		hs+='border : 1px solid #ffffff;';
 		hs+='cursor : default;';
-		hs+='height : 317px;';
+		hs+='height : 99%;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
 		hs+='visibility : inherit;';
-		hs+='width : 317px;';
+		hs+='width : 99%;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style[domTransform + 'Origin']='50% 50%';
@@ -11573,15 +11655,17 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="info_text_body";
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text info_bodys";
 		el.ggType='text';
 		hs ='';
 		hs+='height : 67.8788%;';
-		hs+='left : 6px;';
+		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='top : 44px;';
+		hs+='top : -10000px;';
 		hs+='visibility : inherit;';
 		hs+='width : 305px;';
 		hs+='pointer-events:auto;';
@@ -11624,6 +11708,20 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._info_text_body.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth + 0;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+				var ph=this.parentNode.clientHeight;
+				var h=this.offsetHeight;
+					this.style.top=(this.ggDy + ph/2 - h/2) + 'px';
+			}
 		}
 		me._information.appendChild(me._info_text_body);
 		el=me._info_title=document.createElement('div');
@@ -11631,17 +11729,18 @@ function pano2vrSkin(player,base) {
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
 		el.ggId="info_title";
+		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
 		hs+='height : 20px;';
-		hs+='left : 6px;';
+		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='top : 15px;';
 		hs+='visibility : inherit;';
-		hs+='width : 284px;';
+		hs+='width : 305px;';
 		hs+='pointer-events:auto;';
 		hs+='font-weight: bold;';
 		el.setAttribute('style',hs);
@@ -11651,7 +11750,7 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='left: 0px;';
 		hs+='top:  0px;';
-		hs+='width: 284px;';
+		hs+='width: 305px;';
 		hs+='height: 20px;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
@@ -11686,6 +11785,17 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._info_title.ggUpdatePosition=function (useTransition) {
+			if (useTransition==='undefined') {
+				useTransition = false;
+			}
+			if (!useTransition) {
+				this.style[domTransition]='none';
+			}
+			if (this.parentNode) {
+				var pw=this.parentNode.clientWidth;
+				var w=this.offsetWidth + 0;
+					this.style.left=(this.ggDx + pw/2 - w/2) + 'px';
+			}
 		}
 		me._information.appendChild(me._info_title);
 		el=me._ht_info_close_2=document.createElement('div');
@@ -20520,7 +20630,7 @@ function pano2vrSkin(player,base) {
 	me.addSkin();
 	var style = document.createElement('style');
 	style.type = 'text/css';
-	style.appendChild(document.createTextNode('.ggskin { font-family: mbr; font-size: 15px; } .ggskin a { color: #00adef; text-decoration: underline; } @font-face { font-family:mbr; src: url("./font/MBCT-Reg.woff"); } @font-face{ font-family: Gilroy-SemiBold; src: url(Gilroy_SemiBold.WOFF); } @font-face{ font-family: Gilroy-Light; src: url(Gilroy_Light.WOFF); } .bt_lobby{ font-family: Gilroy-SemiBold; font-size: 19px; } .info_body{ font-family:mbr; font-size: 15px; line-height: 110%; margin-bottom: 0em; } .info_header{ font-family: Gilroy-Bold; font-size: 40px; line-height: 100%; } .info_bodys{ font-family:mbr; font-size: 15px; line-height: 130%; margin-bottom: 0em; }'));
+	style.appendChild(document.createTextNode('.ggskin { font-family: mbr; font-size: 15px; } .ggskin a { color: #00adef; text-decoration: underline; } @font-face { font-family:mbr; src: url("./font/MBCT-Reg.woff"); } @font-face{ font-family: Gilroy-SemiBold; src: url(Gilroy_SemiBold.WOFF); } @font-face{ font-family: Gilroy-Light; src: url(Gilroy_Light.WOFF); } .bt_lobby{ font-family: Gilroy-SemiBold; font-size: 19px; } .info_body{ font-family:mbr; font-size: 15px; line-height: 115%; } .info_bodym{ font-family:mbr; font-size: 14px; line-height: 100%; } .info_header{ font-family: Gilroy-Bold; font-size: 40px; line-height: 100%; } .info_bodys{ font-family:mbr; font-size: 15px; line-height: 130%; margin-bottom: 0em; }'));
 	document.head.appendChild(style);
 	me._screentint.logicBlock_alpha();
 	me._tt_thumbnail_open.logicBlock_text();
@@ -20529,9 +20639,10 @@ function pano2vrSkin(player,base) {
 	me._thumbnail_menu_mobile.logicBlock_visible();
 	me._thumbnail_menu_mobile.logicBlock_alpha();
 	me._wellcome_m.logicBlock_size();
-	me._welcomebgm.logicBlock_size();
+	me._text_m.logicBlock_text();
 	me._video_popup_file.logicBlock_position();
 	me._container_1.logicBlock_visible();
+	me._information.logicBlock_size();
 	me._loading_multires.logicBlock_visible();
 	me._fullscreen.logicBlock_alpha();
 	me._fullscreen_off.logicBlock_alpha();
@@ -20606,13 +20717,13 @@ function pano2vrSkin(player,base) {
 	me._timermobile.logicBlock_position();
 	me._tt_projection.logicBlock_text();
 	me._enter_vr.logicBlock_visible();
-	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._wellcome_m.logicBlock_size();me._welcomebgm.logicBlock_size();me._video_popup_file.logicBlock_position();me._container_1.logicBlock_visible(); });
+	player.addListener('sizechanged', function(args) { me._screentint.logicBlock_alpha();me._tt_thumbnail_open.logicBlock_text();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._wellcome_m.logicBlock_size();me._text_m.logicBlock_text();me._video_popup_file.logicBlock_position();me._container_1.logicBlock_visible();me._information.logicBlock_size(); });
 	player.addListener('tilesready', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('tilesrequested', function(args) { me._loading_multires.logicBlock_visible(); });
 	player.addListener('fullscreenenter', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
 	player.addListener('fullscreenexit', function(args) { me._fullscreen.logicBlock_alpha();me._fullscreen_off.logicBlock_alpha();me._tt_fullscreen.logicBlock_text(); });
 	player.addListener('changenode', function(args) { me._show_controller_button.logicBlock_position();me._loading_multires.logicBlock_visible();me._loadingvideo.logicBlock_visible();me._screentint.logicBlock_alpha();me._controller.logicBlock_position();me._controller.logicBlock_alpha();me._controller_slider.logicBlock_position();me._controller_slider.logicBlock_alpha();me._fullscreen_buttons.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._gyro.logicBlock_position();me._gyro.logicBlock_visible();me._gyro_on.logicBlock_alpha();me._gyro_off.logicBlock_alpha();me._tt_gyro.logicBlock_text();me._projection_buttons.logicBlock_position();me._projection_buttons.logicBlock_visible();me._thumbnail.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_text();me._info.logicBlock_position();me._info.logicBlock_visible();me._autorotate_buttons.logicBlock_position();me._autorotate_buttons.logicBlock_visible();me._autorotate_start.logicBlock_alpha();me._autorotate_stop.logicBlock_alpha();me._tt_rotate.logicBlock_text();me._zoomout.logicBlock_visible();me._zoomin.logicBlock_visible();me._enter_vr.logicBlock_position();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu.logicBlock_alpha();me._thumbnail_menu_mobile.logicBlock_position();me._thumbnail_menu_mobile.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_alpha();me._loading.logicBlock_visible();me._web_page.logicBlock_visible();me._userdata.logicBlock_visible();me._image_popup.logicBlock_visible();me._popup_image.logicBlock_visible();me._timermobile.logicBlock_visible();me._video_popup_file.logicBlock_visible();me._loading_video_file.logicBlock_visible();me._popup_video_file.logicBlock_visible();me._video_popup_url.logicBlock_visible();me._popup_video_url.logicBlock_visible();me._video_popup_controls_url.logicBlock_visible();me._video_popup_vimeo.logicBlock_visible();me._popup_video_vimeo.logicBlock_visible();me._video_popup_youtube.logicBlock_visible();me._popup_video_youtube.logicBlock_visible();me.__360image_gyro.logicBlock_visible();me.__360image.logicBlock_position();me.__360image.logicBlock_scaling();me._phone2.logicBlock_scaling();me._phone3.logicBlock_scaling();me._close.logicBlock_visible();me._information_k.logicBlock_visible();me._infoverkaufer.logicBlock_visible();me._svg_1.logicBlock_scaling();me._video_popup_controls_file.logicBlock_visible();me._container_1.logicBlock_visible();me._info_text_bodyk.logicBlock_visible();me._information.logicBlock_visible(); });
-	player.addListener('configloaded', function(args) { me._tt_show_controller.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._tt_fullscreen.logicBlock_position();me._gyro.logicBlock_visible();me._tt_gyro.logicBlock_position();me._tt_projection.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_position();me._tt_userdata.logicBlock_position();me._tt_rotate.logicBlock_position();me._tt_zoomout.logicBlock_position();me._tt_zoomin.logicBlock_position();me._tt_enter_vr.logicBlock_position();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_visible();me._timermobile.logicBlock_position();me._welcomebgm.logicBlock_size();me.__360image_gyro.logicBlock_visible(); });
+	player.addListener('configloaded', function(args) { me._tt_show_controller.logicBlock_position();me._fullscreen_buttons.logicBlock_visible();me._tt_fullscreen.logicBlock_position();me._gyro.logicBlock_visible();me._tt_gyro.logicBlock_position();me._tt_projection.logicBlock_position();me._thumbnail.logicBlock_visible();me._tt_thumbnail_open.logicBlock_position();me._tt_userdata.logicBlock_position();me._tt_rotate.logicBlock_position();me._tt_zoomout.logicBlock_position();me._tt_zoomin.logicBlock_position();me._tt_enter_vr.logicBlock_position();me._thumbnail_menu.logicBlock_position();me._thumbnail_menu.logicBlock_visible();me._thumbnail_menu_mobile.logicBlock_visible();me._timermobile.logicBlock_position();me.__360image_gyro.logicBlock_visible(); });
 	player.addListener('projectionchanged', function(args) { me._tt_projection.logicBlock_text(); });
 	player.addListener('autorotatechanged', function(args) { me._autorotate_start.logicBlock_alpha();me._autorotate_stop.logicBlock_alpha();me._tt_rotate.logicBlock_text(); });
 	player.addListener('gyroavailable', function(args) { me._gyro.logicBlock_visible(); });
